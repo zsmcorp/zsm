@@ -47,6 +47,13 @@ ul {
   font-weight: 600;
 }
 
+.cabinet {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+}
+
 .date {
   font-family: 'Montserrat';
   font-style: normal;
