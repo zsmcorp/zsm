@@ -39,3 +39,9 @@ ul {
 .rows {
   display: block;
 }
+
+.lesson {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+}
