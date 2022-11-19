@@ -6,7 +6,7 @@ class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name", )}
 
 class TimetableAdmin(admin.ModelAdmin):
-    list_display = ['class_init', 'first_lesson', 'second_lesson', 'thrid_lesson', 'fourth_lesson', 'fifth_lesson', 'sixth_lesson', 'seventh_lesson', 'timetable_date', 'short_lesson', 'short_break']
+    list_display = ['class_init', 'first_lesson', 'second_lesson', 'third_lesson', 'fourth_lesson', 'fifth_lesson', 'sixth_lesson', 'seventh_lesson', 'timetable_date', 'short_lesson', 'short_break']
 
 admin.site.register(Category,  CategoryAdmin)
 admin.site.register(Timetable, TimetableAdmin)
