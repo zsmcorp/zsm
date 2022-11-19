@@ -25,3 +25,14 @@ ul {
   .active {
     background-color: #04AA6D;
   }
+
+.timetable {
+  width: 200px;
+  border: 1px solid black;
+  box-sizing: 250px;
+  display: inline-block;
+}
+
+.rows {
+  display: block;
+}
