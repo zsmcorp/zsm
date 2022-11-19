@@ -2,4 +2,8 @@
 
 {% block title %}Class selector{% endblock %}
 
-{% block content %}<a href="{% url '11b' %}">11Б</a>{% endblock %}
+{% block content %}
+    {% for a in class_list %}
+        <a href="{% url 'detail' a.id %}">{{a.name}}</a>
+    {% endfor %}
+{% endblock %}

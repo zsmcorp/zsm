@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}11b{% endblock %}
+
+{% block content %}
+
+    <h1 class="class-name">{{class_id}}</h1>
+
+    {% if timetables_list %}
+    <div class="rows">
+        {% for a in timetables_list %}
+        <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">{{a.timetable_date}}</h5>
+                <p class="card-text">{{a.first_lesson}}</p>
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+{% endblock %}

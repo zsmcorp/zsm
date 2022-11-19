@@ -1,12 +1,26 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import Http404, HttpResponseRedirect
-from .models import Timetable
+from .models import Timetable, Category
 
 
 
 def index(request):
-    return render(request, 'timetables/list.html')
+    class_list = Category.objects.all()
+    return render(request, 'timetables/list.html', {'class_list':class_list})
 
-def class_11b(request):
-    list_timetable_11b = Timetable.objects.filter(class_init = '11Б')[:10]
-    return render(request, 'timetables/timetables.html', {'list_timetable_11b':list_timetable_11b})
+# def detail(request, timetable_slug):
+#     class_id = Category.objects.filter(slug=timetable_slug)
+#     timetables_list = Timetable.objects.filter(class_init=class_id)[:10]
+#     return render(request, 'timetables/detail.html', {'timetables_list':timetables_list})
+
+def detail(request, tt_id):
+    try:
+        class_id = Category.objects.get(id = tt_id)
+    except:
+        raise Http404("Class not found!")
+    # class_id = get_object_or_404(Category, slug = timetable_slug)
+    # class_id = Category.objects.get(slug=timetable_slug)
+    timetables_list = Timetable.objects.filter(class_init_id=class_id.id)
+
+    return render(request, 'timetables/detail.html', {'timetables_list':timetables_list,
+    'class_id':class_id})
