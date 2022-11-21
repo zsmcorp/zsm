@@ -3,7 +3,10 @@
 {% block title %}Class selector{% endblock %}
 
 {% block content %}
+    <div class="class-buttons">
     {% for a in class_list %}
-        <a href="{% url 'detail' a.id %}">{{a.name}}</a>
+        <a href="{% url 'detail' a.id %}" class="btn btn-primary">{{a.name}}</a>
     {% endfor %}
+    </div>
+
 {% endblock %}
