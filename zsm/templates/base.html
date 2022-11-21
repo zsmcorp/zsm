@@ -44,6 +44,67 @@
             text-align: left;
         }
         
+                ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+        
+        .active {
+            background-color: #04AA6D;
+        }
+
+        .timetable {
+        /* for Chrome */
+        width: 200px;
+        min-width: 200px;
+        min-width: auto;
+        box-sizing: 250px;
+        display: inline-block;
+        padding: 20px;
+        }
+
+        .rows {
+        display: block;
+        }
+
+
+        .lesson {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        }
+
+        .cabinet {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.6);
+        }
+
+        .date {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        }
 
         .class-name {
             text-align: center;
