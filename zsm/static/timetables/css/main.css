@@ -60,3 +60,20 @@ ul {
   font-style: normal;
   font-weight: 700;
 }
+
+.title {
+  font-family: 'Inter' ;
+  font-style: normal;
+  font-weight: 600;
+}
+
+h1.title span {
+  background: linear-gradient(90deg, #10BACD, #9D49F3, #FC6A8F, #F89311);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration-color: transparent;
+}
+body {
+  background: rgba(243, 243, 243);
+}
