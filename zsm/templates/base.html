@@ -17,17 +17,16 @@
     <header>
         <div class="navbar">
             <img>
-            <a href="" class="navbar-button">Home</a>
-            <a href="" class="navbar-button">Class selector</a>
-            <a href="" class="navbar-button">Contact</a>
+            <a href="{% url 'home-index' %}" class="navbar-button">Home</a>
+            <a href="{% url 'index' %}" class="navbar-button">Class selector</a>
+            <a href="#feedback" class="navbar-button">Contact</a>
             <a href="" class="navbar-buttton">About</a>
-
-        </div>
+    </div>
     </header>
-    <section class="content">
+    <section class="content" id="content">
         {% block content %}{% endblock %}
     </section>
-    <section class="feedback">
+    <section class="feedback" id="feedback">
         {% block feedback %}{% endblock %}
     </section>
     <footer>
