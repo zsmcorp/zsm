@@ -16,10 +16,8 @@
 </head>
 <body>
     <header>
-        <div class="navbar">
-            <a href="https://zotkinsb.t.me"><img src="{% static 'homepage/img/daniel.jpg' %}" height="40px" class="logo"></a>
-            <a href="https://t.me/ignatpmk"><img src="{% static 'homepage/img/stephan.jpeg' %}" height="40px" class="logo"></a>
-            <a href="https://t.me/Gasanofffgusein"><img src="{% static 'homepage/img/mASSim.jpg' %}" height="40px" class="logo"></a>
+        <div class="navbar fixed-top">
+
             <a href="{% url 'home-index' %}" class="navbar-button">Home</a>
             <a href="{% url 'index' %}" class="navbar-button">Class selector</a>
             <a href="#feedback" class="navbar-button">Contact</a>
@@ -36,7 +34,11 @@
         </div>
     </section>
     <section class="about" id="about" name="about">
-        <div class="about"></div>
+        <div class="about">
+            <a href="https://zotkinsb.t.me"><img src="{% static 'homepage/img/daniel.jpg' %}" height="40px" class="logo"></a>
+            <a href="https://t.me/ignatpmk"><img src="{% static 'homepage/img/stephan.jpeg' %}" height="40px" class="logo"></a>
+            <a href="https://t.me/Gasanofffgusein"><img src="{% static 'homepage/img/mASSim.jpg' %}" height="40px" class="logo"></a>
+        </div>
 
     </section>
     <footer>
@@ -74,6 +76,9 @@
         }
 
         .navbar {
+            background: rgb(243, 243, 243);
+            box-sizing: border-box;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
             display: flex;
             height: max-content;
             justify-content: left;
@@ -86,12 +91,12 @@
             padding: 28px 15px;
             font-family: Inter, sans-serif;
             font-size: 20px;
-            color: rgb(49, 108, 244);
+            color: #212529;
             transition: all 0.5s;
         }
 
         .navbar-button:hover {
-            color: black;
+            color: rgb(49, 108, 244);
             transition: all 0.5s;
         }
 
@@ -146,7 +151,7 @@
         }
 
         .content {
-            margin: 50px;
+            margin: 150px 50px 50px;
         }
         .class-buttons {
             width: 500px;
