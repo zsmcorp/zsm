@@ -20,7 +20,7 @@
             <a href="{% url 'home-index' %}" class="navbar-button">Home</a>
             <a href="{% url 'index' %}" class="navbar-button">Class selector</a>
             <a href="#feedback" class="navbar-button">Contact</a>
-            <a href="#about" class="navbar-buttton">About</a>
+            <a href="#about" class="navbar-button">About</a>
     </div>
     </header>
     <section class="content" id="content">
@@ -56,23 +56,36 @@
         body {
             background: rgb(243, 243, 243);
         }
+
+        a {
+            text-decoration: none;
+        }
+        q
         .rows {
             display: block;
         }
 
         .navbar {
             display: flex;
-            background: white;
-            height: 75px;
-            vertical-align: middle;
-            align-items: center;
+            height: max-content;
             justify-content: left;
-            padding-left: 30px;
+            padding-left: 15px;
+            padding-top: 0;
+            padding-bottom: 0;
         }
 
         .navbar-button {
-            margin-right: 30px;
-            
+            padding: 28px 15px;
+            font-family: Inter, sans-serif;
+            font-size: 20px;
+            color: rgb(49, 108, 244);
+            transition: all 0.3s;
+        }
+
+        .navbar-button:hover {
+            background: rgb(49, 108, 244);
+            color: white;
+            transition: all 0.3s;
         }
 
         .lesson {
