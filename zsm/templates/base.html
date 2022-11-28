@@ -20,14 +20,21 @@
             <a href="{% url 'home-index' %}" class="navbar-button">Home</a>
             <a href="{% url 'index' %}" class="navbar-button">Class selector</a>
             <a href="#feedback" class="navbar-button">Contact</a>
-            <a href="" class="navbar-buttton">About</a>
+            <a href="#about" class="navbar-buttton">About</a>
     </div>
     </header>
     <section class="content" id="content">
         {% block content %}{% endblock %}
     </section>
-    <section class="feedback" id="feedback">
-        {% block feedback %}{% endblock %}
+
+    <section class="feedback" id="feedback" name="feedback">
+        <div class='feedback'>
+            {% block feedback %}{% endblock %}
+        </div>
+    </section>
+    <section class="about" id="about" name="about">
+        <div class="about"></div>
+
     </section>
     <footer>
 
@@ -55,6 +62,8 @@
 
         .navbar {
             display: block;
+            background: white;
+            height: 75px;
         }
 
         .navbar-button {
@@ -72,6 +81,18 @@
         font-style: normal;
         font-weight: 600;
         color: rgba(0, 0, 0, 0.6);
+        }
+        .feedback {
+            background-color: #eeeeee;
+            width: auto;
+            height: 300px;
+        }
+
+        .about {
+            background-color: rgb(49, 108, 244);
+            width: auto;
+            height: 400px;
+
         }
 
         .date {
