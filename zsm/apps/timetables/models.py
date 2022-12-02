@@ -5,6 +5,7 @@ class Category(models.Model):
     slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL")
     def __str__(self):
         return self.name
+    class Meta
 
 class Timetable(models.Model):
     class_init = models.ForeignKey(Category, on_delete = models.CASCADE, verbose_name = 'Класс')

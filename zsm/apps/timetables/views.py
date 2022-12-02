@@ -13,9 +13,9 @@ def index(request):
 #     timetables_list = Timetable.objects.filter(class_init=class_id)[:10]
 #     return render(request, 'timetables/detail.html', {'timetables_list':timetables_list})
 
-def detail(request, tt_id):
+def detail(request, tt_slug):
     try:
-        class_id = Category.objects.get(id = tt_id)
+        class_id = Category.objects.get(slug = tt_slug)
     except:
         raise Http404("Class not found!")
     # class_id = get_object_or_404(Category, slug = timetable_slug)
