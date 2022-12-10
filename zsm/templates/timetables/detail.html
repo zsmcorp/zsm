@@ -2,8 +2,9 @@
 
 {% block title %}{{ class_id }}{% endblock %}
 
-{% block content %}
 
+{% block content %}
+<div class="container">
     <h1 class="class-name">{{class_id}}</h1>
     {% if timetables_list %}
       <div class="rows">
@@ -28,4 +29,5 @@
         {% endfor %}
       </div>
     {% endif %}
+</div>
 {% endblock %}

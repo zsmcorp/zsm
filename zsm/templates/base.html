@@ -45,6 +45,7 @@
     <style> 
     /* for Safari */
         .timetable {
+            margin: 15px;
             padding: 5px;
             width: 220px;
             min-width: 200px;
@@ -73,7 +74,24 @@
         .rows {
             display: block;
         }
-
+        .container{
+            height: 600px;
+            min-width:auto;
+            overflow-x: scroll;
+            white-space: nowrap;        
+        }
+        .container::-webkit-scrollbar {
+            width: 15px;            
+        }
+        .container::-webkit-scrollbar-track{
+            background: #d4d4d4;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 1) inset;
+        }
+        .container::-webkit-scrollbar-thumb{
+            background: #808080;
+            border-radius: 5px;
+            border: 3px solid #d4d4d4;
+        }
         nav {
             background: rgb(243, 243, 243);
             box-sizing: border-box;
@@ -158,6 +176,12 @@
         .btn {
             padding-left: 20px;
             padding-right: 20px;
+        }
+        .class-name{
+            position: fixed;
+            display: block;
+            top: 95px;
+            
         }
     </style>
 </body>
