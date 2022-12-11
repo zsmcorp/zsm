@@ -31,16 +31,14 @@
             {% block feedback %}{% endblock %}
         </div>
     </section>
-    <section class="about" id="about" name="about">
-        <div class="about">
-            <a href="https://zotkinsb.t.me"><img src="{% static 'homepage/img/daniel.jpg' %}" height="40px" class="logo"></a>
-            <a href="https://t.me/ignatpmk"><img src="{% static 'homepage/img/stephan.jpeg' %}" height="40px" class="logo"></a>
-            <a href="https://t.me/Gasanofffgusein"><img src="{% static 'homepage/img/mASSim.jpg' %}" height="40px" class="logo"></a>
-        </div>
-
-    </section>
     <footer>
-
+        <section class="about" id="about" name="about">
+            <div class="about">
+                <a href="https://zotkinsb.t.me"><img src="{% static 'homepage/img/daniel.jpg' %}" height="40px" class="logo"></a>
+                <a href="https://t.me/ignatpmk"><img src="{% static 'homepage/img/stephan.jpeg' %}" height="40px" class="logo"></a>
+                <a href="https://t.me/Gasanofffgusein"><img src="{% static 'homepage/img/mASSim.jpg' %}" height="40px" class="logo"></a>
+            </div>
+        </section>
     </footer>
     <style> 
     /* for Safari */
@@ -135,10 +133,11 @@
             height: 300px;
         }
 
-        .about {
+        footer {
             background-color: rgb(49, 108, 244);
             width: auto;
-            height: 400px;
+            height: 150px;
+            
 
         }
 
@@ -181,7 +180,9 @@
             position: fixed;
             display: block;
             top: 95px;
-            
+        }
+        .description{
+           font-size: 20px; 
         }
     </style>
 </body>
