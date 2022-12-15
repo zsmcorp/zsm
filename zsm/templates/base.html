@@ -20,7 +20,9 @@
             <a href="{% url 'index' %}" class="navbar-button">Class selector</a>
             <a href="#feedback" class="navbar-button">Contact</a>
             <a href="#about" class="navbar-button">About</a>
-    </nav>
+            <div class="authorization"><a href="">Authorization</a></div>
+            <div class="registration" ><a href="">Registration</a></div>
+        </nav>
     </header>
     <section class="content" id="content">
         {% block content %}{% endblock %}
@@ -97,7 +99,7 @@
             border-radius: 5px;
             border: 3px solid #d4d4d4;
         }
-        nav {
+        .fixed-top {
             background: rgb(243, 243, 243);
             box-sizing: border-box;
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
@@ -185,8 +187,30 @@
             top: 95px;
         }
         .description{
-           font-size: 20px; 
+            font-size: 20px; 
         }
+        .school{
+            font-size: 25px; 
+        }
+        .authorization {
+            margin-left: 750px;
+            display: flex;  
+            justify-content: center;
+            font-family: Inter, sans-serif;
+            font-size: 20px;
+            padding: 28px 15px;
+            
+            
+        }
+        
+        .registration{
+            display: flex;
+            align-items: center;
+            font-family: Inter, sans-serif;
+            font-size: 20px;
+            padding: 28px 15px;
+        }
+        
     </style>
 </body>
 </html>
