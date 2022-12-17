@@ -1,6 +1,13 @@
 from django.db import models
 
 
+# class User(models.Model):
+#     class_init = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Класс')
+#     email = models.CharField('email', max_length=100)
+#     login = models.CharField('login', max_length=50)
+#     password = models.CharField('password', max_length=50)
+
+
 class Category(models.Model):
     name = models.CharField(max_length=3, verbose_name='Класс')
     slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL")
@@ -41,6 +48,9 @@ class Timetable(models.Model):
 
     short_lesson = models.BooleanField('Короткие уроки')
     short_break = models.BooleanField('Короткие перемены')
+
+    def __str__(self):
+        return str(self.class_init) + ' ' + str(self.timetable_date)
 
     class Meta:
         verbose_name = 'Расписание'
