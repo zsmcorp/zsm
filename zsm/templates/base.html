@@ -17,8 +17,8 @@
         <nav class="fixed-top">
             <a href="{% url 'home-index' %}" class="navbar-button">Home</a>
             <a href="{% url 'index' %}" class="navbar-button">Class selector</a>
-            <a href="#feedback" class="navbar-button">Contact</a>
-            <a href="#about" class="navbar-button">About</a>
+            <a href="#contactus" class="navbar-button">Contact</a>
+            <a href="#aboutus" class="navbar-button">About</a>
             <a class="authorization navbar-button" href="">Authorization</a>
             <a class="registration navbar-button" href="">Registration</a>
         </nav>
@@ -33,19 +33,30 @@
         </div>
     </section>
     <footer>
-        <section class="contact_us" id="about" name="about">
-            <div class="contact"><h1 class="contacts">Контакты разработчиков</h1>
-                <img src="{% static 'homepage/img/daniel.jpg' %}" height="100px" class="logo"></a>                
-                <img src="{% static 'homepage/img/Stephan.jpeg' %}" height="100px" class="logo"></a>
-                <img src="{% static 'homepage/img/mASSim.jpg' %}" height="100px" class="logo"></a>
-            <figcaption><a href="https://zotkinsb.t.me" style="padding-right: 90px; position: static; padding-left: 8.5px;">Зоткин Д.</a>
-                        <a href="https://t.me/ignatpmk" style="padding-right:px; position:static;">Стеняев С.</a>
-                        <a href="https://t.me/Gasanofffgusein" style="padding-left: 90px; position: static;">Маркин М.</a>
-            </figcaption>
+        <section class="contact" id="contactus" name="contactus">
+            <div class="container1">
+                <div class="contact"><h1 class="contacts">Контакты разработчиков</h1>
+                    <img src="{% static 'homepage/img/daniel.jpg' %}" height="100px" class="logo"></a>                
+                    <img src="{% static 'homepage/img/Stephan.jpg' %}" height="100px" class="logo"></a>
+                    <img src="{% static 'homepage/img/mASSim.jpg' %}" height="100px" class="logo"></a>
+                <figcaption><a href="https://zotkinsb.t.me" style="padding-right: 90px; position: static; padding-left: 8.5px;">Зоткин Д.</a>
+                            <a href="https://t.me/ignatpmk" style="padding-right:px; position:static;">Стеняев С.</a>
+                            <a href="https://t.me/Gasanofffgusein" style="padding-left: 90px; position: static;">Маркин М.</a>
+                </figcaption>
+                </div>
             </div>
         </section>
     </footer>
-
+    <section class="about" id="aboutus" name="aboutus">
+        <div class="about">
+            <div class="container2">
+                <h1 class="aboutsite">О сайте</h1>
+                <p style="font-size: 20px;">Данный сайт предоставляет наиболее полную информацию для всех желающих узнать об актуальном расписании в МБОУ СОШ №72 с УИОУП для каждого класса на любой день недели</p>
+                <p style="font-size: 20px;">Сайт создан старшеклассниками МБОУ СОШ №72 для пользования учениками всех классов и их родителями</p>
+                <p style="text-align:center;"><u>© Все мои мечты защищены моим трудолюбием</u></p>
+            </div>
+        </div>
+    </section>
     <style> 
     /* for Safari */
         .timetable {
@@ -74,7 +85,7 @@
             align-items: center;
             color: #000;
             padding: 0.5rem;
-            font-size: 50px;
+            font-size: 40px;
         }
         p span {
             color: rgba(0, 0, 0, 0.6);
@@ -83,11 +94,30 @@
         body {
             background: rgb(243, 243, 243);
         }
-
+        .about{
+            background-color: #A5A5A5;
+            width: auto;
+            height: 15.8rem;
+        }
+        .aboutsite{
+            text-align: center;
+            color: #000;
+            padding: 0.5rem;
+            font-size: 40px;
+        }
         a {
             text-decoration: none;
         }
-
+        .container1{
+            width: 1170px;
+            margin: 0 auto;
+            height: 0 auto;
+        }
+        .container2{
+            width: 1600px;
+            margin: 0 auto;
+            height: 0 auto;
+        }
         .rows {
             display: block;
         }
